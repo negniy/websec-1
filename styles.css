@@ -6,6 +6,7 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
+    padding: 10px;
 }
 
 .calculator {
@@ -25,12 +26,26 @@ body {
     display: flex;
     gap: 5px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 input, select {
+    flex: 1;
+    min-width: 0;
     padding: 10px;
     border: 1px solid #aaa;
     border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .input-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    input, select {
+        text-align: center;
+    }
 }
 
 button {
@@ -44,7 +59,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(87, 146, 87);
+    background-color: rgb(165, 147, 255);
     color: #ffffff;
 }
 
